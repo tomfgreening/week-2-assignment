@@ -1,2 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
+body {
+  background-color: slateblue;
+}
+/* leaving the body colour here for now, so I can tell if something goes wrong later down the line */
+
