@@ -1,0 +1,1 @@
+console.log ("this is me testing that I have linked my JS to the HTML")
