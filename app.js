@@ -2,52 +2,44 @@ console.log ("this is me testing that I have linked my JS to the HTML")
 // Leaving this in my code for now, so I can see if anything breaks down the line.
 
 const valueObjects = [
-    { src: "https://images-assets.nasa.gov/image/PIA03606/PIA03606~large.jpg?w=1920&h=1920&fit=clip&crop=faces%2Cfocalpoint", alt: "Photo"},
-    { src: "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/CQFGZNVKCZJF7PROHV42QLV6JE.jpg", alt: "photo 2"},
+    { src: "https://www.nasa.gov/wp-content/uploads/2024/12/afrc2024-0166-033orig.jpg", alt: "Photograph of a high-tech drone flying across a blue sky, with a distant moon in the background."},
+    { src: "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/galaxies/spiral/Hubble_NGC5643_potw2450a.jpg?w=4096&format=webp&fit=clip&crop=faces%2Cfocalpoint", alt: "Photograph of a swirling, red galaxy in space."},
 ];
 
 console.log (valueObjects.length);
-
-
-//TODO: I want to create my thumbnail images
-//STEP 1: Select the DOM element we are manipulating
-//I need to select both the thumbnail container and the large image container
-document.getElementById("Thumbnails-Container");
-console.log;
-document.getElementById("Fullsizedimg-Container");
-console.log;
-//Since creating the thumbnail images takes more than one step, what is the best way to write a block of code? A function!
-//I want to resuse this function for all my images --> I need parameters
+// Lines 11,12,13 and 14 assigns a value to my HTML containters in the DOM. I am doing this so I can select and manipulate them in JavaScript.
+const ThumbnailsContainer = document.getElementById(".Thumbnails-Container");
+console.log;(ThumbnailsContainer);
+const FullSizedImgContainer = document.getElementById(".Fullsizedimg-Container");
+console.log;(FullSizedImgContainer);
+// Line 16 declares the function to create thumbnails. I wi
 function generatethumbnails() {
-    // line 23 is going to look inside 'valueObjects' array -> perform the following function FOREACH of the objects found in the array. Also, for the following objects in the array, they will be reffered to as 'currentObject'. For object it finds in the array, it will refer to that object as 'currentObject' from now on. the newly generated image doesn't have a scr or alt yet.
-    valueObjects.forEach(function(currentObject){
+    // line 23 is going to look inside the 'valueObjects' array -> perform the following function 'FOREACH' of the objects found in the array. Also, for the following objects in the array, they will be reffered to as 'currentObject'. For each object the function finds in the array, it will refer to that object as 'currentObject' from now on.
+    valueObjects.forEach(function(currentObject)){
     let generatedImage = document.createElement("img");
-    // lines 26 27 are setting the src and alt for our newly generated image element. They are matching the value of the src and alt of the object that the FOREACH loop is looking at, at the time. The reason that we refer to the src and alt of the array object as image.src and image.alt is because we told the function that we would refer to these objects as image.
+    // lines 26 and 27 are setting the src and alt for our newly generated image element. They are matching the value of the src and alt of the object that the FOREACH loop is looking at, at the time. The reason that we refer to the src and alt of the array object as currentObject.src and currentObject.alt is because we told the function that we would refer to these objects as 'currentObject'.
     generatedImage.src = currentObject.src;
     generatedImage.alt = currentObject.alt;
-}
-        // 
+    // Lines 29 and 30 will set the width and height of the generated image.
+    generatedImage.width(150px);
+    generatedImage.height(100px);
+    // Line 27 will append the function's output to the 'Thumbnails-Container' section in the HTML.
+    ThumbnailsContainer.appendChild(generatedImage);
+    // Line 29 will log the newly generated image to the console.
+    console.log (generatedImage);
+} 
     };
-    // Below is my image source loop. Joe very kindly introduced me to the 'forEach' loop to use instead.
+    // I have now written the function that will generate the thumbnail images and defined the parameters for the function.
+
+    // Below is my inital image source loop. Joe very kindly introduced me to the 'forEach' loop to use instead.
 //     let generatedImage = document.createElement("img");
 //     generatedImage.src = "";
 //     generatedImage.alt = "";
 // for (let i = 0; i =< images.length; i++);
 
-}
-
-
-    //I need to create more than one thumbnail --> I can use a loop
-    //You can use different ways to loop thorugh your array: for loop / forEach()
-    //Inside the loop, we have a few steps to do:
-    //create an image element
-    //we need assign values to the image element properties
-    //src = value
-    //we also need to assign a value to the className property
     //we need add an event to the image elements we are creating here
-    //we need to append the images to the thumbnail container
-  }
-  createThumbnails(images);
+
+
   
   //!commit your work!
   
