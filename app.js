@@ -27,6 +27,8 @@ function generatethumbnails() {
     ThumbnailsContainer.appendChild(generatedImage);
     // Line 29 will log the newly generated image to the console.
     console.log (generatedImage);
+    // Line 31 adds the 'event' for when the user clicks on the thumnail images.
+    addEventListener("click", handleClick);
 } 
     };
     // I have now written the function that will generate the thumbnail images and defined the parameters for the function.
@@ -36,19 +38,20 @@ function generatethumbnails() {
 //     generatedImage.src = "";
 //     generatedImage.alt = "";
 // for (let i = 0; i =< images.length; i++);
-
-    //we need add an event to the image elements we are creating here
-
-
   
-  //!commit your work!
-  
-  //TODO: I want to create my larger images
+
   //The larger images will be created when the user triggers the thumbnail images event
   //This function will be event handler for our images
-  function createLargeImagesHandler(largeImage) {
-    //I want to remove the image that's in the full screen, and create a new image with new properties
-    // largeImageContainer.innerHTML = null / ""
+  function displayLargeImage() {
+    FullSizedImgContainer.innerHTML = null;
+    valueObjects.forEach(function(largerObject)){
+        let largerGeneratedImage = document.createElement("img");
+        largerGeneratedImage.src = largerObject.src;
+        largerGeneratedImage.alt = largerObject.alt;
+        largerGeneratedImage.width()
+    }
+
+    
     //create an image element
     //assign values to the image element
     //add a className to style the large image
