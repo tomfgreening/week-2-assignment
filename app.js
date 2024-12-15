@@ -8,9 +8,9 @@ const valueObjects = [
 
 console.log (valueObjects.length);
 // Lines 11,12,13 and 14 assigns a value to my HTML containters in the DOM. I am doing this so I can select and manipulate them in JavaScript.
-const ThumbnailsContainer = document.getElementById(".Thumbnails-Container");
+const ThumbnailsContainer = document.querySelector(".Thumbnails-Container");
 console.log;(ThumbnailsContainer);
-const FullSizedImgContainer = document.getElementById(".Fullsizedimg-Container");
+const FullSizedImgContainer = document.querySelector(".Fullsizedimg-Container");
 console.log;(FullSizedImgContainer);
 // Line 16 declares the function to create thumbnails. I wi
 function generatethumbnails() {
@@ -32,7 +32,7 @@ function generatethumbnails() {
 } 
     };
     generatethumbnails();
-    
+
     // I have now written the function that will generate the thumbnail images and defined the parameters for the function.
 
     // Below is my inital image source loop. Joe very kindly introduced me to the 'forEach' loop to use instead.
