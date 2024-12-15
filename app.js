@@ -27,10 +27,12 @@ function generatethumbnails() {
     ThumbnailsContainer.appendChild(generatedImage);
     // Line 29 will log the newly generated image to the console.
     console.log (generatedImage);
-    // Line 31 adds the 'event' for when the user clicks on the thumnail images.
-    addEventListener("click", handleClick);
+    // Line 31 adds the 'event' for when the user clicks on the thumnail images to display the larger version of the image.
+    addEventListener("click", handleClick, displayLargeImage());
 } 
     };
+    generatethumbnails();
+    
     // I have now written the function that will generate the thumbnail images and defined the parameters for the function.
 
     // Below is my inital image source loop. Joe very kindly introduced me to the 'forEach' loop to use instead.
@@ -48,15 +50,10 @@ function generatethumbnails() {
         let largerGeneratedImage = document.createElement("img");
         largerGeneratedImage.src = largerObject.src;
         largerGeneratedImage.alt = largerObject.alt;
-        largerGeneratedImage.width()
+        largerGeneratedImage.width(100rem);
+        largerGeneratedImage.height(100rem);
+        FullSizedImgContainer.appendChild(largerGeneratedImage);
+        console.log(largerGeneratedImage);
     }
-
-    
-    //create an image element
-    //assign values to the image element
-    //add a className to style the large image
-    //append the image to the largeImageContainer
-  }
-  //!we don't call the createLargeImagesHandler in here. It is an event handler!
+    };
   
-  //!commit your work!
