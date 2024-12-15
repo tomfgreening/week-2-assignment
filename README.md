@@ -1,5 +1,39 @@
 # week-2-assignment
 
+Reflection:
+
+I could not get my code to work as intended and have not achieved any required goals, other than adding appropriate alt text to images used.
+
+I found this project difficult and do not feel positive about my submission. I'm frustrated because I know the logic of what is being asked but I just don't have the ability or knowledge at present to complete the task in coding language. I managed to get as far as writing the functions in Javascript for thumbnail generation and full-size image generation and linked an array to them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Week 2 assignment - Build an accessible image gallery
 
 Instructions
