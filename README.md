@@ -32,7 +32,7 @@ I found this project difficult and do not feel positive about my submission. I'm
 
 
 
-
+Assignment Brief:
 
 Week 2 assignment - Build an accessible image gallery
 
